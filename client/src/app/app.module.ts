@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
+//import { SurveyComponent } from './pages/survey/survey.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
@@ -29,6 +30,12 @@ import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt'
 
 // Route Guards
 import { AuthGuard } from './guards/auth.guard';
+import { QuestionComponent } from './pages/question/question.component';
+import { SurveyComponent } from './pages/survey/survey.component';
+//import { QuestionComponent } from './questions/questions.component';
+import { QuestionDetailsComponent } from './questions/question-details/question-details.component';
+import { QuestionListComponent } from './questions/question-list/question-list.component';
+import { QuestionDeleteComponent } from './questions/question-delete/question-delete.component';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -44,13 +51,20 @@ export function jwtTokenGetter() {
     AboutComponent,
     ProductsComponent,
     ServicesComponent,
+    
     ContactComponent,
     PageNotFoundComponent,
     ContactListComponent,
     RegisterComponent,
     LoginComponent,
     ContactDetailsComponent,
-    ContactDeleteComponent
+    ContactDeleteComponent,
+    QuestionComponent,
+    SurveyComponent,
+    //QuestionComponent,
+    QuestionDetailsComponent,
+    QuestionListComponent,
+    QuestionDeleteComponent
   ],
   imports: [
     BrowserModule,

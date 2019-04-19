@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { SurveyComponent } from './pages/survey/survey.component';
+
+import { QuestionComponent } from './pages/question/question.component';
 
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -13,6 +16,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
+
+import { QuestionListComponent } from './questions/question-list/question-list.component';
+import { QuestionDetailsComponent } from './questions/question-details/question-details.component';
+import { QuestionDeleteComponent } from './questions/question-delete/question-delete.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -23,11 +30,18 @@ const routes: Routes = [
   {path: 'products', component: ProductsComponent, data: {title: 'Products'}},
   {path: 'services', component: ServicesComponent, data: {title: 'Services'}},
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
+  {path: 'survey', component: SurveyComponent, data: {title: 'Survey'}},
+  {path: 'question', component: QuestionComponent, data: {title: 'Question'}},
 
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/edit/:id', component: ContactDetailsComponent, data: {title: 'Edit Contact'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/delete/:id', component: ContactDeleteComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},
+
+  {path: 'question/question-list', component: QuestionListComponent, data: {title: 'Question List'}, canActivate: [AuthGuard]},
+  {path: 'question/question-list/add', component: QuestionDetailsComponent, data: {title: 'Add Question'}, canActivate: [AuthGuard]},
+  {path: 'question/question-list/edit/:id', component: QuestionDetailsComponent, data: {title: 'Edit Question'}, canActivate: [AuthGuard]},
+  {path: 'question/question-list/delete/:id', component: QuestionDeleteComponent, data: {title: 'Add Question'}, canActivate: [AuthGuard]},
 
   {path: 'register', component: RegisterComponent, data: {title: 'Register'}},
   {path: 'login', component: LoginComponent, data: {title: 'Register'}},
