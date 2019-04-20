@@ -15,6 +15,17 @@
                     value="{{ question.question }}"
                     required>
                 </div>
+
+               <div class="form-group">
+                    <label for="AnswerTextField">Answer</label>
+                    <input type="text" class="form-control"
+                    id="AnswerTextField"
+                    placeholder="Enter Answer"
+                    name="question"
+                    [(ngModel)]="question.answer"
+                    value="{{ question.answer }}"
+                    required>
+                </div>
                
   
                 <button type="submit" class="btn btn-primary">
@@ -26,5 +37,5 @@
   
         </div>
     </div>
-  </div>
+  </div>x
   
